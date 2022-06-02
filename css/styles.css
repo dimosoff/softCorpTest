@@ -545,7 +545,7 @@ body {
 }
 
 .ordering {
-  padding-top: 118px;
+  padding-top: 119px;
   padding-bottom: 150px;
   color: #fff;
   background: url("../images/ordering-background.png") center/cover no-repeat #272733;
@@ -722,4 +722,122 @@ body {
 .f-item button[type="submit"] {
   font-size: 15px;
   margin-top: 14px;
+}
+
+.footer {
+  color: #fff;
+  font-size: 13px;
+  background-color: #3d4050;
+}
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 80px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.footer__sector {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.footer__separator {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+.footer__separator:before {
+  content: "";
+  display: block;
+  left: 50%;
+  width: 1px;
+  height: 18px;
+  position: relative;
+  background-color: #c3c3c3;
+}
+
+.footer-copyright {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.footer-wallets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #c3c3c3;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.footer-wallets__item {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.footer-wallets__item svg {
+  margin-right: 10px;
+  vertical-align: -4px;
+}
+
+.footer-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.footer-contacts a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-contacts a svg {
+  max-width: 15px;
+  max-height: 15px;
+  margin-right: 10px;
+  vertical-align: -2px;
+}
+
+.footer-contacts a svg path {
+  fill: #3e9cdc;
+}
+
+.footer-contacts__item {
+  padding-right: 15px;
+  padding-left: 15px;
 }

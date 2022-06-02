@@ -295,8 +295,10 @@ body {
   display: inline-block;
 }
 
-.menu .menu__list li + li {
-  margin-left: 56px;
+@media (min-width: 992px) {
+  .menu .menu__list li + li {
+    margin-left: 56px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -358,13 +360,13 @@ body {
 @media (max-width: 991.98px) {
   .menu {
     position: fixed;
-    top: 35px;
+    top: 0;
     right: 0;
     bottom: 0;
     overflow: auto;
     width: 340px;
     padding: 110px 30px 10px;
-    background-color: #fff;
+    background-color: #272733;
     -webkit-transform-origin: right center;
             transform-origin: right center;
     -webkit-transform: perspective(100px) translateX(100%) rotateY(-20deg);
@@ -377,9 +379,6 @@ body {
   .header._menu-opened .menu {
     -webkit-transform: perspective(100px) translateX(0);
             transform: perspective(100px) translateX(0);
-  }
-  .header._scrolled .menu {
-    top: 0;
   }
 }
 
@@ -545,7 +544,7 @@ body {
 }
 
 .ordering {
-  padding-top: 119px;
+  padding-top: 118px;
   padding-bottom: 150px;
   color: #fff;
   background: url("../images/ordering-background.png") center/cover no-repeat #272733;
@@ -721,12 +720,15 @@ body {
 
 .f-item button[type="submit"] {
   font-size: 15px;
-  margin-top: 14px;
+  margin-top: 13px;
+  min-height: 48px;
 }
 
 .footer {
   color: #fff;
   font-size: 13px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #3d4050;
 }
 
@@ -742,12 +744,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 80px;
   margin-right: -15px;
   margin-left: -15px;
 }
 
-.footer__sector {
+.footer .footer__sector, .footer .footer__separator {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -756,10 +757,10 @@ body {
   padding-left: 15px;
 }
 
-.footer__separator {
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
+.footer__sector.footer-copyright {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 .footer__separator:before {
@@ -770,12 +771,6 @@ body {
   height: 18px;
   position: relative;
   background-color: #c3c3c3;
-}
-
-.footer-copyright {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
 }
 
 .footer-wallets {

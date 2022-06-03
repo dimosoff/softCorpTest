@@ -20,15 +20,12 @@ formRangeElement.addEventListener('input', (e) => updateRangenPercent(e.target.v
 formSelectElement.addEventListener('keydown', (e) => {
   if (e.code == 'Space' || e.key == ' ') {
     e.preventDefault();
-    expandSelect(e);
+    expandSelect();
   }
   if (e.code == 'Enter' || e.key == 'Enter') {
-    squeezeSelect(e);
+    squeezeSelect();
   }
 });
-
-let isSelectExpanded = false;
-
 
 // formSelectElement.addEventListener("touchstart", (e) => {
 //   pointerDown(e)
@@ -37,12 +34,10 @@ let isSelectExpanded = false;
 //   pointerUp(e)
 // });
 
-document.addEventListener('mousedown', (e) => {
-  pointerDown(e)
-});
-formSelectElement.addEventListener('mouseup', (e) => {
-  pointerUp(e)
-});
+let isSelectExpanded = false;
+
+document.addEventListener('mousedown', (e) => pointerDown(e));
+formSelectElement.addEventListener('mouseup', (e) => pointerUp(e));
 
 formFileButton.addEventListener('click', () => formFileElement.click());
 

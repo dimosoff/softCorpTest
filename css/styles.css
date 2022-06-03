@@ -921,6 +921,8 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 33.3333%;
           flex: 0 1 33.3333%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -934,7 +936,7 @@ body {
         flex-basis: 66.6666%;
   }
   .form__item_more-gap {
-    margin-top: 44px !important;
+    margin-top: 56px !important;
   }
 }
 
@@ -957,7 +959,7 @@ body {
     -webkit-box-ordinal-group: 7;
         -ms-flex-order: 6;
             order: 6;
-    margin-top: 40px !important;
+    margin-top: 50px !important;
   }
 }
 
@@ -978,7 +980,7 @@ body {
     -webkit-box-ordinal-group: 7;
         -ms-flex-order: 6;
             order: 6;
-    margin-top: 25px !important;
+    margin-top: 35px !important;
   }
 }
 
@@ -1161,7 +1163,7 @@ body {
 
 .f-item input[type="range"] {
   height: 24px;
-  margin: 10px 0 0;
+  margin: 10px 0 -12px;
   -webkit-appearance: none;
   background: transparent;
   width: 100%;

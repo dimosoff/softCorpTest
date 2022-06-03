@@ -1,8 +1,11 @@
 $main-color: #fff;
 $second-color: #43abf0;
 $third-color: #3e9cdc;
-$grey-color: #c3c3c3;
-$dark-color: #272733;
+$fourth-color: #42a9ed;
+$dark-blue: #286690;
+$grey: #c3c3c3;
+$darkish: #3d4050;
+$dark: #272733;
 $desktop-min: "min-width: 992px";
 $tablet-max: "max-width: 991.98px";
 $tablet-min: "min-width: 576px";
@@ -117,7 +120,7 @@ body {
     overflow: auto;
     width: 340px;
     padding: 110px 30px 10px;
-    background-color: $dark-color;
+    background-color: $dark;
     transform-origin: right center;
     transform: perspective(100px) translateX(100%) rotateY(-20deg);
     transition: transform $transition3, top $transition3;
@@ -374,7 +377,7 @@ body {
   padding-top: 118px;
   padding-bottom: 150px;
   color: $main-color;
-  background: url("../images/ordering-background.png") center/cover no-repeat $dark-color;
+  background: url("../images/ordering-background.png") center/cover no-repeat $dark;
 
   @media ($tablet-max) and ($tablet-min) {
     padding-top: 88px;
@@ -510,7 +513,7 @@ body {
     display: inline-block;
     border-radius: 50%;
     background-color: $third-color;
-    border: 5px solid #286690;
+    border: 5px solid $dark-blue;
 
     @media ($tablet-max) and ($tablet-min) {
       width: 90px;
@@ -562,6 +565,7 @@ body {
   }
   &__item {
     flex: 0 1 33.3333%;
+    align-self: flex-end;
     padding-left: 15px;
     padding-right: 15px;
 
@@ -573,7 +577,7 @@ body {
         flex-basis: 66.6666%;
       }
       &_more-gap {
-        margin-top: 44px !important;
+        margin-top: 56px !important;
       }
     }
     @media (max-width: 749.98px) and ($tablet-min) {
@@ -588,7 +592,7 @@ body {
       }
       &_more-gap {
         order: 6;
-        margin-top: 40px !important;
+        margin-top: 50px !important;
       }
     }
     @media ($mobile-max) {
@@ -602,7 +606,7 @@ body {
       }
       &_more-gap {
         order: 6;
-        margin-top: 25px !important;
+        margin-top: 35px !important;
       }
     }
   }
@@ -635,7 +639,7 @@ body {
     position: relative;
     border: 1px solid $main-color;
     padding: 12px 11px;
-    color: $dark-color;
+    color: $dark;
     border-radius: 3px;
     background-color: rgba(255, 255, 255, 0.85);
 
@@ -655,7 +659,7 @@ body {
   select {
     z-index: 1;
     scrollbar-width: thin;
-    scrollbar-color: $third-color #3d4050;
+    scrollbar-color: $third-color $darkish;
 
     &::-webkit-scrollbar {
       width: 7px;
@@ -665,7 +669,7 @@ body {
       background-color: $third-color;
     }
     &::-webkit-scrollbar-track {
-      background-color: #3d4050;
+      background-color: $darkish;
     }
     option {
       padding: 12px 11px;
@@ -674,29 +678,29 @@ body {
       &:checked:disabled {
         top: 0;
         position: sticky;
-        background: linear-gradient(#3d4050, #3d4050);
-        background-color: #3d4050 !important;
+        background: linear-gradient($darkish, $darkish);
+        background-color: $darkish !important;
         color: $main-color !important;
       }
       &:checked {
-        background: linear-gradient(#42a9ed, #42a9ed);
-        background-color: #42a9ed !important;
-        color: #3d4050 !important;
+        background: linear-gradient($fourth-color, $fourth-color);
+        background-color: $fourth-color !important;
+        color: $darkish !important;
       }
       &:hover {
-        color: #42a9ed;
+        color: $fourth-color;
       }
     }
     &._active {
       color: $main-color;
       padding: 0;
-      border-color: #3d4050;
+      border-color: $darkish;
       background-color: rgba(39, 39, 51, 0.9);
     }
   }
 
   @mixin placeholder {
-    color: $dark-color;
+    color: $dark;
     opacity: 1;
   }
   input::-webkit-input-placeholder {
@@ -742,18 +746,18 @@ body {
   }
 
   $track-color: rgba(255, 255, 255, 0.7) !default;
-  $thumb-color: #42a9ed !default;
+  $thumb-color: $fourth-color !default;
 
   $thumb-radius: 12px !default;
   $thumb-height: 24px !default;
   $thumb-width: 24px !default;
   $thumb-border-width: 3px !default;
-  $thumb-border-color: #286690 !default;
+  $thumb-border-color: $dark-blue !default;
 
   $track-width: 100% !default;
   $track-height: 6px !default;
   $track-border-width: 1px !default;
-  $track-border-color: #fff !default;
+  $track-border-color: $main-color !default;
 
   $track-radius: 5px !default;
   $contrast: 5% !default;
@@ -778,7 +782,7 @@ body {
 
   input[type="range"] {
     height: 24px;
-    margin: 10px 0 0;
+    margin: 10px 0 -12px;
     -webkit-appearance: none;
     background: transparent;
     width: $track-width;
@@ -876,7 +880,7 @@ body {
   font-size: 13px;
   padding-top: 22px;
   padding-bottom: 22px;
-  background-color: #3d4050;
+  background-color: $darkish;
 
   @media (max-width: 799.98px) {
     padding-top: 40px;
@@ -950,7 +954,7 @@ body {
       width: 1px;
       height: 18px;
       position: relative;
-      background-color: $grey-color;
+      background-color: $grey;
     }
   }
 }
@@ -959,7 +963,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  color: $grey-color;
+  color: $grey;
   margin-right: -15px;
   margin-left: -15px;
 

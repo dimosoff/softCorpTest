@@ -273,6 +273,20 @@ body {
     bottom: 0;
     display: block;
     overflow: hidden;
+
+    &:after {
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      background-color: transparent;
+
+      @media ($mobile-max) {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
   }
   &__container {
     position: relative;

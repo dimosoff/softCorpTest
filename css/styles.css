@@ -528,6 +528,22 @@ body {
   overflow: hidden;
 }
 
+.main-banner picture:after {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: transparent;
+}
+
+@media (max-width: 575.98px) {
+  .main-banner picture:after {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
 .main-banner__container {
   position: relative;
   width: 100%;

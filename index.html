@@ -40,13 +40,15 @@
           </nav>
           <button class="header__burger burger">
             <span></span><span></span><span></span>
+            <span class="sr-only">Открыть меню</span>
           </button>
         </div>
       </div>
     </header>
     <section class="main-banner">
       <picture>
-        <source media="(min-width: 1200px)" srcset="images/main-banner-desktop.webp" type="image/webp">
+        <source media="(min-width: 576px)" srcset="images/main-banner-desktop.webp" type="image/webp">
+        <source media="(max-width: 575.98px)" srcset="images/main-banner-mobile.webp" type="image/webp">
         <img class="_bkgr-image" src="images/main-banner-desktop.jpg" alt="main banner background" width="1920">
       </picture>
       <div class="main-banner__container container">
@@ -74,32 +76,32 @@
           <div class="featurettes__wrapper">
             <div class="featurettes__item fts-item">
               <div class="fts-item__image-wrapper">
-                <img src="images/magnifier.svg" alt="Lorem ipsum dolor sit amet" class="fts-item__image">
+                <img src="images/magnifier.svg" alt="Lorem ipsum dolor sit amet" class="fts-item__image" width="33" height="33">
               </div>
               <h3 class="fts-item__title">Lorem ipsum dolor sit amet</h3>
             </div>
             <div class="featurettes__item fts-item">
               <div class="fts-item__image-wrapper">
-                <img src="images/percent.svg" alt="Сonsecteturadipiscing elit" class="fts-item__image">
+                <img src="images/percent.svg" alt="Сonsecteturadipiscing elit" class="fts-item__image" width="31" height="31">
               </div>
               <h3 class="fts-item__title">Сonsecteturadipiscing elit</h3>
             </div>
             <div class="featurettes__item fts-item">
               <div class="fts-item__image-wrapper">
-                <img src="images/subtract.svg" alt="Sed do eiusmod tempor" class="fts-item__image">
+                <img src="images/subtract.svg" alt="Sed do eiusmod tempor" class="fts-item__image" width="38" height="42">
               </div>
               <h3 class="fts-item__title">Sed do eiusmod tempor</h3>
             </div>
             <div class="featurettes__item fts-item">
               <div class="fts-item__image-wrapper">
-                <img src="images/envelope.svg" alt="Esse cillum doloreeu fugiat" class="fts-item__image">
+                <img src="images/envelope.svg" alt="Esse cillum doloreeu fugiat" class="fts-item__image" width="36" height="28">
               </div>
               <h3 class="fts-item__title">Esse cillum doloreeu fugiat</h3>
             </div>
             <div class="featurettes__item fts-item">
               <div class="fts-item__image-wrapper">
                 <img src="images/money.svg" alt="Excepteur sint occaecat cupidatat non proident"
-                  class="fts-item__image">
+                  class="fts-item__image" width="39" height="26">
               </div>
               <h3 class="fts-item__title">Excepteur sint occaecat cupidatat non proident</h3>
             </div>
@@ -108,7 +110,7 @@
         <form class="ordering__form form" name="form">
           <div class="form__row">
             <div class="form__item f-item f-item_fixed-height">
-              <select name="f-system-type" id="f-system-type" size="1">
+              <select name="f-system-type" id="f-system-type" size="1" aria-label="Выберите тип системы">
                 <option value="o0" selected disabled>Выберите тип системы</option>
                 <option value="o1">Sed ut perspiciatis</option>
                 <option value="o2">Nemo enim ipsam</option>
@@ -138,7 +140,7 @@
                 <img src="images/document.svg" alt="form file button icon">
                 <span>Прикрепить файл</span>
               </button>
-              <input type="file" name="f-file" id="f-file" hidden>
+              <input type="file" name="f-file" id="f-file" aria-label="Прикрепить файл" hidden>
             </div>
             <div class="form__item form__item_more-gap f-item">
               <button class="_btn" type="submit" name="f-submit" id="f-submit">Отправить</button>

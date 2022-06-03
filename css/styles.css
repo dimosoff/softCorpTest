@@ -141,6 +141,7 @@ button {
 
 .scroll-top {
   position: fixed;
+  z-index: 1000;
   width: 40px;
   height: 40px;
   border: 0;
@@ -242,7 +243,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 1010;
   background-color: rgba(16, 16, 29, 0.9);
   -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;

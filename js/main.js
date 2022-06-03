@@ -26,32 +26,27 @@ formSelectElement.addEventListener('keydown', (e) => {
 });
 
 let isSelectExpanded = false;
+
+
+// formSelectElement.addEventListener("touchstart", (e) => {
+//   pointerDown(e)
+// });
+// formSelectElement.addEventListener("touchend", (e) => {
+//   pointerUp(e)
+// });
+
 document.addEventListener('mousedown', (e) => {
-  if (formSelectElement === e.target || formSelectElement.contains(e.target)) {
-    if (!isSelectExpanded) {
-      e.preventDefault();
-      e.target.focus();
-      expandSelect(e);
-    }
-  } else {
-    squeezeSelect(e);
-    isSelectExpanded = false;
-  }
+  pointerDown(e)
 });
 formSelectElement.addEventListener('mouseup', (e) => {
-  if (isSelectExpanded) {
-    squeezeSelect(e);
-    isSelectExpanded = false;
-  } else {
-    isSelectExpanded = true;
-  }
+  pointerUp(e)
 });
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const data = new FormData(form);
   let dataArray = [];
-  for (const [name,value] of data) {
+  for (const [name, value] of data) {
     dataArray.push([name, value])
   }
   alert(dataArray);
@@ -59,6 +54,33 @@ form.addEventListener('submit', (e) => {
 
 function updateRangenPercent(percentValue) {
   formRangeLabelPercent.textContent = `${percentValue}%`;
+}
+
+function pointerDown(e) {
+  if (formSelectElement === e.target || formSelectElement.contains(e.target)) {
+    if (!isSelectExpanded) {
+      e.preventDefault();
+    }
+  }
+}
+
+function pointerUp(e) {
+  if (formSelectElement === e.target || formSelectElement.contains(e.target)) {
+    if (!isSelectExpanded) {
+      e.target.focus();
+      expandSelect();
+      isSelectExpanded = true;
+    } else {
+      squeezeSelect();
+      isSelectExpanded = false;
+    }
+  } else {
+    if (isSelectExpanded) {
+      squeezeSelect();
+      isSelectExpanded = false;
+    }
+  }
+
 }
 
 function squeezeSelect() {

@@ -105,10 +105,10 @@
             </div>
           </div>
         </div>
-        <form class="ordering__form form">
+        <form class="ordering__form form" name="form">
           <div class="form__row">
-            <div class="form__item f-item">
-              <select name="f-system-type" id="f-system-type">
+            <div class="form__item f-item f-item_fixed-height">
+              <select name="f-system-type" id="f-system-type" size="1">
                 <option value="o0" selected disabled>Выберите тип системы</option>
                 <option value="o1">Sed ut perspiciatis</option>
                 <option value="o2">Nemo enim ipsam</option>
@@ -126,9 +126,7 @@
             <div class="form__item f-item">
               <input type="text" name="f-name" id="f-name" value="" placeholder="Ваше имя" aria-label="Ваше имя">
             </div>
-          </div>
-          <div class="form__row">
-            <div class="form__item form__item--wide f-item">
+            <div class="form__item form__item_wide f-item">
               <div class="f-item__title">
                 <label for="f-range">Sed ut perspiciatis, unde omnis iste natus</label>
                 <span class="f-item__percent" id="f-range-percent">0%</span>
@@ -142,9 +140,7 @@
               </button>
               <input type="file" name="f-file" id="f-file" hidden>
             </div>
-          </div>
-          <div class="form__row">
-            <div class="form__item f-item">
+            <div class="form__item form__item_more-gap f-item">
               <button class="_btn" type="submit" name="f-submit" id="f-submit">Отправить</button>
             </div>
           </div>
@@ -155,9 +151,9 @@
       <div class="footer__container container">
         <div class="footer__wrapper">
           <div class="footer__sector footer-copyright">
-            <p>© 2018 «LOREMIPSUM.NET» Все права защищены.</p>
+            <p>© 2018 «LOREMIPSUM.NET» <br>Все права защищены.</p>
           </div>
-          <div class="footer__separator"></div>
+          <span class="footer__separator"></span>
           <div class="footer__sector">
             <div class="footer-wallets">
               <div class="footer-wallets__item">
@@ -191,7 +187,7 @@
               </div>
             </div>
           </div>
-          <div class="footer__separator"></div>
+          <span class="footer__separator"></span>
           <div class="footer__sector">
             <div class="footer-contacts">
               <a class="footer-contacts__item" href="mailto:info@ipsum228.com">

@@ -9,6 +9,8 @@ const formRangeElement = document.querySelector("input[name='f-range']");
 const formRangeLabelPercent = document.getElementById('f-range-percent');
 const formSelectElement = document.getElementById('f-system-type');
 const form = document.querySelector("form[name='form']");
+const formFileButton = document.getElementById('f-file-button');
+const formFileElement = document.getElementById('f-file');
 
 updateRangenPercent(formRangeElement.value);
 
@@ -41,6 +43,8 @@ document.addEventListener('mousedown', (e) => {
 formSelectElement.addEventListener('mouseup', (e) => {
   pointerUp(e)
 });
+
+formFileButton.addEventListener('click', () => formFileElement.click());
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();

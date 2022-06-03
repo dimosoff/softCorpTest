@@ -672,6 +672,7 @@ body {
   }
   select {
     z-index: 1;
+    cursor: pointer;
     scrollbar-width: thin;
     scrollbar-color: $third-color $darkish;
 

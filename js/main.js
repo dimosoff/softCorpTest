@@ -27,14 +27,15 @@ formSelectElement.addEventListener('keydown', (e) => {
   }
 });
 
-// formSelectElement.addEventListener("touchstart", (e) => {
-//   pointerDown(e)
-// });
-// formSelectElement.addEventListener("touchend", (e) => {
-//   pointerUp(e)
-// });
+let isSelectExpanded = false,
+    isTouchEvent = false;
 
-let isSelectExpanded = false;
+formSelectElement.addEventListener("touchstart", (e) => {
+  isTouchEvent = true;
+});
+formSelectElement.addEventListener("touchend", (e) => {
+  //pointerUp(e)
+});
 
 document.addEventListener('mousedown', (e) => pointerDown(e));
 formSelectElement.addEventListener('mouseup', (e) => pointerUp(e));
@@ -65,7 +66,7 @@ function pointerDown(e) {
 
 function pointerUp(e) {
   if (formSelectElement === e.target || formSelectElement.contains(e.target)) {
-    if (!isSelectExpanded) {
+    if (!isSelectExpanded && !isTouchEvent) {
       e.target.focus();
       expandSelect();
       isSelectExpanded = true;

@@ -1070,6 +1070,7 @@ body {
 
 .f-item select {
   z-index: 1;
+  cursor: pointer;
   scrollbar-width: thin;
   scrollbar-color: #3e9cdc #3d4050;
 }

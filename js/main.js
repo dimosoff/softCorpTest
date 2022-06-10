@@ -28,17 +28,31 @@ formSelectElement.addEventListener('keydown', (e) => {
 });
 
 let isSelectExpanded = false,
-    isTouchEvent = false;
+  eventHandler = '';
 
 formSelectElement.addEventListener("touchstart", (e) => {
-  isTouchEvent = true;
+  eventHandler = "touchstart";
+  pointerDown(e);
+}, {
+  capture: true,
+  passive: false
 });
 formSelectElement.addEventListener("touchend", (e) => {
-  //pointerUp(e)
+  eventHandler = "touchend";
+  pointerUp(e);
+}, {
+  capture: true,
+  passive: false
 });
 
-document.addEventListener('mousedown', (e) => pointerDown(e));
-formSelectElement.addEventListener('mouseup', (e) => pointerUp(e));
+document.addEventListener('mousedown', (e) => {
+  eventHandler = "mousedown";
+  pointerDown(e);
+});
+document.addEventListener('mouseup', (e) => {
+  eventHandler = "mouseup";
+  pointerUp(e);
+});
 
 formFileButton.addEventListener('click', () => formFileElement.click());
 
@@ -66,7 +80,7 @@ function pointerDown(e) {
 
 function pointerUp(e) {
   if (formSelectElement === e.target || formSelectElement.contains(e.target)) {
-    if (!isSelectExpanded && !isTouchEvent) {
+    if (!isSelectExpanded) {
       e.target.focus();
       expandSelect();
       isSelectExpanded = true;
@@ -89,6 +103,8 @@ function squeezeSelect() {
 }
 
 function expandSelect() {
-  formSelectElement.setAttribute("size", "6");
-  formSelectElement.classList.add('_active');
+  if (eventHandler != 'mousedown') {
+    formSelectElement.setAttribute("size", "6");
+    formSelectElement.classList.add('_active');
+  }
 }
